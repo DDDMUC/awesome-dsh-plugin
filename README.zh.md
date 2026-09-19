@@ -22,13 +22,9 @@ dsh plugin --profile web add dshmarket
 
 > 💡 更喜欢对话式？装 [dsh-find-plugin](https://github.com/awesome-dsh-plugin/dsh-find-plugin#readme)，想要什么插件直接问 agent（`dsh plugin --profile web add dsh-find-plugin`）。
 
-> 💬 **每个插件页都能评论了。** 向作者提问、说说你拿它做了什么、或者给后来者提个醒——[看个例子](https://awesome-dsh-plugin.com/p/00080000/dsh-project-memory/)。讨论存在本仓库的 [GitHub Discussions](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/discussions) 里，除了你已有的 GitHub 账号之外不需要注册任何东西。不点开就不会加载。
-
 > ℹ️ **关于桌面客户端。** 本列表与客户端无关：一个插件被收录，是因为它遵守官方协议——声明 `dsh.bundle` manifest、可通过 `dsh plugin add` 安装——而不是因为它适配了某个特定客户端。
 >
-> 我们正在与 `anywhere-labs/deepseek-harness-desktop` 沟通重新合作的事，有进展会在这里同步。无论结果如何，收录标准不变：适配任何单一客户端都不是收录条件，也不会有插件因为没有适配某个客户端而被移除或降权。
->
-> 值得一试的客户端：[dsh-desktop](https://github.com/dataelement/dsh-desktop) 与 [deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop)——两者均内嵌 dsh-market，本列表的插件一键即达。其他优秀的第三方客户端同样可以。
+> 值得一试的客户端：[dsh-desktop](https://github.com/dataelement/dsh-desktop)、[deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop)，以及 anywhere-labs 的 [deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop)——均内嵌 dsh-market，本列表的插件一键即达。其他优秀的第三方客户端同样可以。
 
 > [!WARNING]
 > 安装插件等于在你的机器上跑第三方代码，权限和你本人一样大——能读你的文件、用你的凭据、访问网络，工具审批管不到插件自己的代码。收录不等于做过安全审查：装之前先看一眼源码，不熟的插件尽量放在没有密钥、没有重要资料的环境里试。完整免责声明见页面底部。
@@ -3450,6 +3446,7 @@ dsh plugin --profile web add dshmarket
 - [henrytian1998/dsh-doctor](https://github.com/henrytian1998/dsh-doctor) — 诊断 DSH home、残留进程、端口与过大 session，并生成可粘贴的 /doctor 报告。
 - [hezhongtang/dsh-update-copilot](https://github.com/hezhongtang/dsh-update-copilot) — DeepSeek Harness 的更新助手：一次扫描覆盖 DeepSeek Harness 本体和每个 profile 的插件，说清改了什么、风险多大，只更新你确认过的那些。
 - [hjj345/dsh-sm-version-display](https://github.com/hjj345/dsh-sm-version-display) — 在侧边栏显示已安装的 DeepSeek Harness 版本，检查 npm 与 GitHub Releases 更新，并提供手动或确认后执行的更新命令。
+- [hoyyang/dsh-code-graph](https://github.com/hoyyang/dsh-code-graph) — DSH 原生分支感知代码知识图谱：调用链/影响面/路径/架构覆盖 158+ 语言，保鲜门控，切分支索引自动跟随，单工具分发零 MCP 会话。
 - [huasheng33991/dsh-power-button](https://github.com/huasheng33991/dsh-power-button) — 固定在窗口右下角的一键启停按钮：通过脱离终端的辅助进程按原始启动命令重启 DeepSeek Harness（仅本机同源可调），附「仅停止」小按钮。
 - [huaweicloud/huaweicloud-devkit](https://github.com/huaweicloud/huaweicloud-devkit) — 让 AI 智能体掌握华为云全流程操作——构建、部署、运维全程受控，助您轻松安全上云。
 - [HuiHuitie-zhu/dsh-check-update](https://github.com/HuiHuitie-zhu/dsh-check-update) — 更新检查器（npm 版）：设置页对比 @deepseek-ai/dsh 与已装插件的本地/最新版本，有更新时导航红点提醒，并直接给出更新命令。
@@ -4129,12 +4126,12 @@ description:
   zh: 一句话描述，以句号结尾。
 ```
 
-一个插件一个文件，两份投稿永远不会碰同一个文件，PR 之间不再互相冲突。这一个 YAML 文件就是完整投稿——你的 PR 合并后，两个 README 会在 `main` 上自动重新生成。（想本地预览可以跑 `node scripts/generate-readme.mjs`，把结果一起提交也照样接受，但都不是必须的。）
+一个插件一个文件，两份投稿永远不会碰同一个文件，PR 之间不再互相冲突。执行 `node scripts/generate-readme.mjs` 重新生成两个 README，并把结果一起提交。
 
 你的仓库需要满足：
 
 - `package.json` 声明 **`dsh.bundle`** —— 只有 `dsh.client` 无法安装；每个 PR 都会自动校验这一项
-- 仓库**创建满 1 天** —— 刚建的仓库达标后可以重新提交，重新提交不会有任何影响
+- 仓库**创建满 1 天**且**提交数 ≥ 10** —— 刚建的仓库达标后可以重新提交
 - 已添加 [`dsh-plugin`](https://github.com/topics/dsh-plugin) topic
 
 主题/皮肤类插件：放进**主题与外观**分类，会自动出现在 [dsh-market](https://github.com/dsh-market/dsh-market) 插件市场的**主题 Tab**，用户可一键安装、切换。

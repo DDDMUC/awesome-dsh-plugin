@@ -22,13 +22,9 @@ dsh plugin --profile web add dshmarket
 
 > 💡 Prefer chat? [dsh-find-plugin](https://github.com/awesome-dsh-plugin/dsh-find-plugin#readme) lets your agent find plugins for you (`dsh plugin --profile web add dsh-find-plugin`).
 
-> 💬 **Every plugin page takes comments.** Ask the author a question, say what you used it for, or warn the next reader — [see an example](https://awesome-dsh-plugin.com/p/00080000/dsh-project-memory/). Threads live in this repository's [GitHub Discussions](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin/discussions), so there is no account to make beyond the GitHub one you have. Nothing loads until you ask for it.
-
 > ℹ️ **On desktop clients.** This list is client-agnostic. A plugin is listed because it follows the official protocol — it declares a `dsh.bundle` manifest and installs with `dsh plugin add` — not because it adapts to any particular client.
 >
-> We're talking with `anywhere-labs/deepseek-harness-desktop` about working together again; we'll update this note as that progresses. Whatever comes of it, the listing rule stays as it is: adapting to any particular client is not a condition of being listed, and no plugin will be removed or demoted for not doing so.
->
-> Clients worth a look: [dsh-desktop](https://github.com/dataelement/dsh-desktop) and [deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop) — both ship dsh-market built in, so everything on this list is one click away. Any other good third-party client works too.
+> Clients worth a look: [dsh-desktop](https://github.com/dataelement/dsh-desktop), [deepseek-harness-desktop](https://github.com/hairyf/deepseek-harness-desktop), and [deepseek-harness-desktop](https://github.com/anywhere-labs/deepseek-harness-desktop) by anywhere-labs — all ship dsh-market built in, so everything on this list is one click away. Any other good third-party client works too.
 
 > [!WARNING]
 > Installing a plugin runs third-party code on your machine with your own permissions — it can read your files, use your credentials, and reach the network. Tool approvals don't sandbox plugin code. Being on this list is not a security review: check the source before you install, and try unfamiliar plugins somewhere that doesn't hold your keys. See the full disclaimer at the bottom of this page.
@@ -3450,6 +3446,7 @@ A listing isn't permanent either: entries whose repos go away, stop being mainta
 - [henrytian1998/dsh-doctor](https://github.com/henrytian1998/dsh-doctor) - Diagnose DSH home, leftover processes, ports, and oversized sessions, then write a paste-ready /doctor report.
 - [hezhongtang/dsh-update-copilot](https://github.com/hezhongtang/dsh-update-copilot) - Update copilot for DeepSeek Harness: one scan covers the DeepSeek Harness core and every profile plugin; explains what changed and how risky each update is, then updates only what you confirm.
 - [hjj345/dsh-sm-version-display](https://github.com/hjj345/dsh-sm-version-display) - Shows the installed DeepSeek Harness version in the sidebar, checks npm and GitHub Releases for updates, and provides manual or confirmed update commands.
+- [hoyyang/dsh-code-graph](https://github.com/hoyyang/dsh-code-graph) - Branch-aware code knowledge graph for DSH - callers, impact, trace and architecture over 158+ languages, freshness-gated, one dispatcher tool, zero MCP sessions.
 - [huasheng33991/dsh-power-button](https://github.com/huasheng33991/dsh-power-button) - One-click start/stop button pinned to the window bottom-right corner: restarts DeepSeek Harness in place via a detached helper that relaunches the exact boot invocation (loopback same-origin guarded), with an optional stop-only action.
 - [huaweicloud/huaweicloud-devkit](https://github.com/huaweicloud/huaweicloud-devkit) - HuaweiCloud DevKit gives AI agents complete command of Huawei Cloud — build, deploy, operate, always governed, always secure.
 - [HuiHuitie-zhu/dsh-check-update](https://github.com/HuiHuitie-zhu/dsh-check-update) - Update checker (npm edition): a settings page comparing local and latest versions of @deepseek-ai/dsh and every installed plugin, with a red-dot nav reminder and ready-made update commands.
@@ -4129,12 +4126,12 @@ description:
   zh: 一句话描述，以句号结尾。
 ```
 
-One file per plugin means two submissions never touch the same file, so PRs stop conflicting with each other. That single YAML file is the whole submission — both READMEs are regenerated automatically on `main` after your PR merges. (Running `node scripts/generate-readme.mjs` locally to preview is fine, and committing the result is still accepted, but neither is required.)
+One file per plugin means two submissions never touch the same file, so PRs stop conflicting with each other. Run `node scripts/generate-readme.mjs` to refresh both READMEs, and commit the result.
 
 Your repo must:
 
-- declare **`dsh.bundle`** in `package.json` — `dsh.client` alone is not installable; every PR checks this automatically
-- be at least **1 day old** — a brand-new repo can resubmit once it clears this, and nothing is held against a resubmission
+- declare a **`dsh.bundle`** manifest in `package.json` — `dsh.client` alone is not installable, and this is checked automatically on every PR
+- be at least **1 day old** with **10 or more commits** — brand-new repos can resubmit once they clear this
 - carry the [`dsh-plugin`](https://github.com/topics/dsh-plugin) topic
 
 Themes & skins: entries under **Themes & Appearance** power the Themes tab in `dsh-market` — one-click install/switch for users.
@@ -4156,3 +4153,4 @@ Listed here? Show it off:
 This is a community-maintained index. Plugins are developed and maintained by their respective authors; listing here is not an endorsement, and no guarantees are made about any plugin's safety, quality, or maintenance. Installing a plugin runs third-party code on your machine — review the source and install at your own risk. This project is not affiliated with DeepSeek.
 
 Issues here are for the list and its website only. Problems inside the plugin market UI go to [dsh-market](https://github.com/dsh-market/dsh-market/issues); problems with `dsh` itself go to [deepseek-harness](https://github.com/deepseek-ai/deepseek-harness/issues); a bug in a plugin goes to that plugin's own repository.
+
