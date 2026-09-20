@@ -2301,7 +2301,7 @@ dsh plugin --profile web add dshmarket
 - [zhtx2024/dsh-skin-switcher](https://github.com/zhtx2024/dsh-skin-switcher) — 设置面板皮肤管理器：自动扫描已安装的 Web UI 皮肤并一键切换，profile 补丁自动维护。
 - [Zhuang-A/dsh-go-sensei](https://github.com/Zhuang-A/dsh-go-sensei) — 围棋复盘教练：解析 SGF 棋谱，用自带 KataGo 引擎补算胜率与目差，在对话里逐手讲解问题手，并把讲解写回 SGF 副本；Web 面板用棋盘展示问题手、AI 首选与变化图。
 - [ZI-LV68/dsh-deepseek-model-router](https://github.com/ZI-LV68/dsh-deepseek-model-router) — 自动切换 DeepSeek 模型：含图片时走视觉模型，复杂任务走 pro，常规任务走 fast；提供 switch_model 工具手动固定。
-- [ZiFan1117/bazidiy#ontology](https://github.com/ZiFan1117/bazidiy/tree/main/packages/ontology) — 八字DIY 本体插件：把确定性八字/五行/珠子/款式规则暴露为 DSH 工具（calculate_bazi、propose_designs、generate_design、save/load_design），含手串 SVG 渲染与珠子编辑器；execute 内不调用模型。
+- [ZiFan1117/bazidiy#ontology](https://github.com/ZiFan1117/bazidiy/tree/main/atoms/bazidiy.plugin/pkg) — 八字DIY 本体插件：把确定性八字/五行/珠子/款式规则暴露为 DSH 工具（calculate_bazi、propose_designs、generate_design、save/load_design），含手串 SVG 渲染与珠子编辑器；execute 内不调用模型。
 - [ZiFan1117/dsh-atom-market](https://github.com/ZiFan1117/dsh-atom-market) — 把软件原子市场接入 DeepSeek Harness：Agent 可检索能力原子、读取完整契约、投稿前校验 manifest、起草新原子（atom_search/atom_read/atom_validate/atom_draft）；默认直连 GitHub 商店，零配置。
 - [zilliztech/dsh-milvus](https://github.com/zilliztech/dsh-milvus) — 只读 DSH Web 插件，可在对话中检查和搜索 Milvus 或 Zilliz Cloud Collection，支持标量、BM25、稠密向量与混合查询。
 - [zimai233/dsh-exam-countdown](https://github.com/zimai233/dsh-exam-countdown) — 查询 64 场中国考试（高考/考研/四六级/CPA/法考…）的规则日期（第二个周六、第一个周日）与倒计时。
@@ -2777,7 +2777,6 @@ dsh plugin --profile web add dshmarket
 - [Meteor-system/superpowers-for-dsh](https://github.com/Meteor-system/superpowers-for-dsh) — 将 obra/superpowers 的 14 个工程技能打包为 DeepSeek Harness bundle，附原生 Agent 预设、自动会话引导和 Windows 沙箱兼容。
 - [MichengAI/dsh-agency-agents](https://github.com/MichengAI/dsh-agency-agents) — 增加可召唤的领域专家名单，专家以子代理运行，主会话保留任务和最终答复。
 - [mjylfz/dsh-skill-mover](https://github.com/mjylfz/dsh-skill-mover) — 把其他 Agent（Cursor、Claude Code、Codex、OpenCode 等）的技能一键搬进 DeepSeek Harness：扫描 14 个平台外加共享的 ~/.agents 技能层，识别不同来源的同名技能，可挑选每个技能的最佳来源，复制到 DSH 技能目录，支持回滚移除已迁移的技能。
-- [mudden2380078550-creator/write-chinese-long-screenplay](https://github.com/mudden2380078550-creator/write-chinese-long-screenplay) — 中文长剧本写作 skill：双输入板块（背景 + 人物卡）+ 因果—价值内核，保证长篇幅的连续性与人物声音，兼容 Codex / Claude Code / dsh / zcode。
 - [NecromanAlbert/dsh-skill-slash-fuzzy](https://github.com/NecromanAlbert/dsh-skill-slash-fuzzy) — 用唯一 kebab 片段解析斜杠 skill，例如 /oneshot 可加载 game-package-oneshot。
 - [noteflowai/dsh-skills-anywhere](https://github.com/noteflowai/dsh-skills-anywhere) — 实时技能提供器：把 60+ 个其他 Agent（Claude Code、Codex、Cursor、Gemini CLI、Copilot）的技能目录、Claude Code 插件市场以及任意 git 技能仓库中的技能接入 dsh 目录，零拷贝零软链接；自动去重、修复 frontmatter、处理同名冲突，并附带 CLI（list、add、sync、doctor）。
 - [nullptr-DZF/dsh-academic-research-skills](https://github.com/nullptr-DZF/dsh-academic-research-skills) — 移植自 ARS Claude Code 插件（GitHub 44k+ stars）：面向 DeepSeek Harness 的学术研究技能套件——深度调研 agent 团队、论文写作流水线、多视角同行评审小组与端到端编排器，外加十六个 /ars-* 命令。
