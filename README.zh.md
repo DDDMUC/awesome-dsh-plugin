@@ -1437,6 +1437,7 @@ dsh plugin --profile web add dshmarket
 - [imrascal/dsh-archive](https://github.com/imrascal/dsh-archive) — DeepSeek Harness 存档会话管理插件：在设置面板管理归档会话（恢复/删除）与回收站。
 - [ishuowang/dsh-rolehub-bridge](https://github.com/ishuowang/dsh-rolehub-bridge) — 发现并校验可移植的 RoleHub 角色，固定其精确 bundle，再将提示词和随角色打包的 Skills 加载到独立、可续聊的 DSH Session，以 Host 批准的工具绑定限制能力，并可选接入 Agent Team Room。
 - [ishuowang/dsh-sideband](https://github.com/ishuowang/dsh-sideband) — 无需等待或打断正在工作的 Agent：即时冻结有界 Session 快照，由隔离且无工具的 LLM 异步总结，再将带来源信息的上下文胶囊投递到另一 Session 或已授权 Room；对 Session 默认 quiet，也可显式 wakeup。
+- [JanEickholt/dsh-asc](https://github.com/JanEickholt/dsh-asc) — 由模型主导的 DeepSeek Harness 上下文压缩：由 agent 决定何时压缩、压缩什么，以持久化会话日志替换提交，并提供可逆的工具结果压缩与逐字节哈希取回。
 - [Jason-skd/dsh-session-fork](https://github.com/Jason-skd/dsh-session-fork) — Git 式会话分支，模拟真实程序员协作的并行开发：根分支充当秘书维持调度，子分支持有各自上下文并行工作，任务完成后仅以压缩摘要 squash/rebase 合并回来；提供 /branch 命令、分支页签、send_message_by_branch 跨分支消息，并附一份把会话分支绑定到 git worktree 的治理基线。
 - [JasonQQ/dsh-btw-plugin](https://github.com/JasonQQ/dsh-btw-plugin) — Codex 风格 /btw 指令：在继承主会话上下文的子代理中回答附带问题，答案展示在界面里、不写入主会话历史。
 - [jasonrale/dsh-archive-manager](https://github.com/jasonrale/dsh-archive-manager) — DSH Web UI 的归档会话管理器：重新打开已归档会话并继续对话、取消归档恢复原位、彻底删除会话，支持分组浏览、消息搜索与原生视图同步。
@@ -3243,6 +3244,7 @@ dsh plugin --profile web add dshmarket
 - [cheesehaqi/dsh-qq-onebot-bridge](https://github.com/cheesehaqi/dsh-qq-onebot-bridge) — 基于 OneBot v11 反向 WebSocket 的 QQ 双向桥：每群/每私聊用户独立会话、@引用语音转文字、私聊图片/动画表情识图、表情与贴纸工具。
 - [chidaic/dsh-agent-notify](https://github.com/chidaic/dsh-agent-notify) — 任务完成或需要你输入/批准时弹出 Windows 系统通知（浏览器 Notification API）：完成/提问/审批/计划审阅提醒，点击气泡直达会话，支持后台模式，设置页在官方设置 → 任务提示。
 - [chromoany/dsh-notify-me](https://github.com/chromoany/dsh-notify-me) — 消息提醒 / 桌面通知 / 后台回复完成提醒：模型需要你操作（审批、方案确认、提问）或后台回复完成时，弹出系统通知与提示音，并标记标签页标题；设置页可开关提醒、调音量、切换中英文通知语言。
+- [Cloudto1/dsh-approval-chime](https://github.com/Cloudto1/dsh-approval-chime) — DSH 请求审批时响一声提示音；音色、音量与开关在「设置 → 通知提醒」里调。
 - [dAI-aigc/dsh-wechat](https://github.com/dAI-aigc/dsh-wechat) — 基于腾讯 iLink 机器人通道的微信桥：每个联系人一个独立会话，支持入站文本/图片/文件，并在整轮运行期间显示微信原生“正在输入”。
 - [DeepseekHarnessPlugins/Notification](https://github.com/DeepseekHarnessPlugins/Notification) — 任务完成通知推送：代理转入空闲、出错或阻塞时，经 macOS 通知中心、Windows Toast 及 Bark、ntfy、Server酱、通用 Webhook 发送系统通知。
 - [dingyi222666/dsh-session-notification](https://github.com/dingyi222666/dsh-session-notification) — 会话完成等四种状态的通知响应，支持浏览器提示。
