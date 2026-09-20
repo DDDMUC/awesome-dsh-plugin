@@ -1484,6 +1484,7 @@ dsh plugin --profile web add dshmarket
 - [MuWinds/dsh-archived-sessions](https://github.com/MuWinds/dsh-archived-sessions) — 归档会话管理：浏览已归档会话，支持恢复（取消归档）与清空。
 - [mzzsfy/dsh-plugin#dsh-session-manager](https://github.com/mzzsfy/dsh-plugin/tree/main/packages/dsh-session-manager) — 会话管理：超期会话自动归档（阈值可配），归档面板支持取消归档，删除移入系统回收站可还原。
 - [ne-ilyxa/dsh-session-drafts](https://github.com/ne-ilyxa/dsh-session-drafts) — Cursor 风格的新会话：每次点击都新建一个空白草稿会话（首条消息前即持久化），不再复用工作区唯一的空会话；侧栏新增草稿切换器，可同时保留多个空会话。
+- [neufagents/dsh-healthcheck](https://github.com/neufagents/dsh-healthcheck) — 面向 DSH 的会话健康体检（只读）：全库扫描（总量、最大会话、体积 / 事件数超限告警）与单会话深检（尾部闭合检查、工具调用 / 结果配对、事件类型分布）。
 - [nguyenduclong-ict/dsh-session-progress](https://github.com/nguyenduclong-ict/dsh-session-progress) — 会话任务进度跟踪：系统提示词注入、实时百分比计算与侧边抽屉面板。
 - [nickkkkkk123123/dsh-resume-on-restart](https://github.com/nickkkkkk123123/dsh-resume-on-restart) — 检测 DSH 服务重启后自动唤醒主 agent：对比上次运行时间、人性化播报中断时长，并把提示消息投递回来让中断的工作自动恢复。仅依赖 cordis ctx 服务，兼容 DSH Desktop 打包环境。
 - [ningmengxr/dsh-task-control](https://github.com/ningmengxr/dsh-task-control) — DeepSeek Harness 任务控制：卡死的下载与工具调用一键急停与强制终止、下载进度、卡死识别、pwsh 运行状态检测，以及追加条件/暂停/恢复（恢复指令隐形注入，不打扰聊天）。
@@ -3696,6 +3697,7 @@ dsh plugin --profile web add dshmarket
 - [bigclawd/dsh-security-guard](https://github.com/bigclawd/dsh-security-guard) — dsh 安全守卫插件：基于规则的静态扫描覆盖恶意代码、提示词注入与令牌浪费，运行时拦截危险工具调用，提供 /scan 命令、plugin_scan 工具、Web 面板与白名单。
 - [BotonJ/dsh-plugin-sentinel](https://github.com/BotonJ/dsh-plugin-sentinel) — 插件安装前静态安全审计：生命周期脚本、动态执行、凭据外传组合特征与 patch 层风险；零依赖，tar 包全程内存解析不落盘。
 - [cdxiaodong/dsh-guardian](https://github.com/cdxiaodong/dsh-guardian) — Agent 安全护栏：拦截并审计所有工具调用，命中敏感操作就要求人工确认。
+- [ChaoJie0/dsh-tm-guard](https://github.com/ChaoJie0/dsh-tm-guard) — macOS 上 DSH 智能体的零干预权限门：可经本地 git 或时间机器回滚的本地写操作自动放行，拦截网络、装包、进程控制与敏感路径读取，并记录完整审计日志。
 - [ChenLaoshiYF/dsh-mcpguard](https://github.com/ChenLaoshiYF/dsh-mcpguard) — 扫描 skill 与 MCP 配置中的提示注入、同形字、Unicode 隐形字符、危险 shell 与凭据泄露。
 - [couldbeme/dsh-write-gate](https://github.com/couldbeme/dsh-write-gate) — 承诺写入闸门：由运营者编写的规则在工具调用执行前生效——先是一层确定性守卫，再是一层 LLM 裁判，默认失败即拒绝，每一次拦截都写进矛盾日志。
 - [cuddly-guacamole/dsh-auto-approval-llm](https://github.com/cuddly-guacamole/dsh-auto-approval-llm) — 为 DSH Auto 权限档提供 LLM 辅助自动审批：静态规则、LLM 复审、风险分档、人工倒计时兜底、熔断与文件级审计。
